@@ -35,7 +35,7 @@ export default function ProjectOverview() {
               Demo
             </a>
           </p>
-          <Link replace={true} to={item.pathLink}></Link>
+          <Link replace={true} to={item.pathLink!}></Link>
 
           {item.description}
         </div>

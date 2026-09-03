@@ -7,7 +7,7 @@ import ToogleThemeIcon from "./ToogleThemeIcon";
 export default function Header({
   wrapperRef,
 }: {
-  wrapperRef: React.RefObject<HTMLDivElement>;
+  wrapperRef: React.RefObject<HTMLDivElement> | null;
 }) {
   const [isScroll, setIsScroll] = useState<boolean>(false);
   useEffect(() => {

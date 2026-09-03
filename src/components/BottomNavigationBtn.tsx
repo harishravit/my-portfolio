@@ -23,14 +23,14 @@ export default function BottomNavigationBtn({
   ) : (
     <div className="flex items-center justify-between">
       <Link
-        to={routes[0]}
+        to={routes[0]!}
         className="text-primary hover:text-primary hover:cursor-pointer underline underline-offset-2 py-1 px-2 rounded-full flex gap-x-1 items-center "
       >
         <ArrowLeft size={16} />
         {text[0]}
       </Link>
       <Link
-        to={routes[1]}
+        to={routes[1]!}
         className="text-primary hover:text-primary hover:cursor-pointer underline underline-offset-2 py-1 px-2 rounded-full flex gap-x-1 items-center "
       >
         {text[1]}

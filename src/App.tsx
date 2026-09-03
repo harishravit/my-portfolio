@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 
 const App = () => {
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null!);
   return (
     <main className="w-screen h-screen bg-portfolio overflow-hidden ">
       <section className="overflow-hidden w-full h-full">
