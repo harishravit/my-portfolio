@@ -1,0 +1,23 @@
+Home page:
+Section:
+    Container:
+        Header:layout:flex,dir-row,horizantal gap auto
+        Content:
+            HeadingTextGroup:layout:flex-column
+                div:layout:flex-column,
+                paragraph
+            Explor:flex
+                div:flex
+                    button:flex
+                        span:number
+                        span:title
+                    line
+            Social links:flex
+                div:flex
+                    button:flex
+                        span:title
+                        span:icon
+                    line
+        Footer:layout:flex ,align-items-center
+            span
+

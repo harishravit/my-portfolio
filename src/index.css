@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+* {
+  font-family: "Geist", sans-serif;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 8%;
+  --muted-foreground: 240 4% 46%;
+  --border: 240 6% 90%;
+  --secondary: 240 5% 96%;
+  --primary: 252 83% 60%;
+
+  --font-size-heading: 2.1rem;
+  --font-size-title: 1.4rem;
+  --font-size-subtitle: 1.1rem;
+  --font-size-link: 1.625rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --line-height-display: 1.2;
+  --line-height-body: 1.6;
+  /* Light */
+  --color-bg: #f0f0f0;
+  --color-text-primary: #292929;
+  --color-text-secondary: #4a4a4a;
+  --color-border: hsl(0, 0%, 78%);
+  --color-scrollbar-thumb: var(--color-border);
+}
+.dark {
+  /* Dark */
+  --background: 240 10% 6%;
+  --foreground: 0 0% 96%;
+  --muted-foreground: 240 5% 60%;
+  --border: 240 6% 18%;
+  --secondary: 240 6% 12%;
+  --primary: 252 90% 68%;
+
+  --color-bg: #202020;
+  --color-text-primary: #e6e6e6;
+  --color-text-secondary: #a1a1a1;
+  --color-border: hsl(0, 0%, 37%);
+  --color-scrollbar-thumb: var(--color-border);
+}
+@utility scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+  }
+  &::-webkit-scrollbar-button {
+    /* display: none; */
+    background: red;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) transparent;
+}
+@theme {
+  --color-portfolio: var(--color-bg);
+  --color-primary: var(--color-text-primary);
+  --color-secondary: var(--color-text-secondary);
+  --color-border: var(--color-border);
+  /* Font Sizes */
+  --text-heading: var(--font-size-heading);
+  --text-title: var(--font-size-title);
+  --text-subtitle: var(--font-size-subtitle);
+  --text-link: var(--font-size-link);
+  --text-body: var(--font-size-body);
+  --text-small: var(--font-size-small);
+  /*Line height*/
+  --leading-heading: var(--line-height-display);
+  --leading-body: var(--line-height-body);
+}
