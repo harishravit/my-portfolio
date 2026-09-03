@@ -11,7 +11,7 @@ export default function Header({
 }) {
   const [isScroll, setIsScroll] = useState<boolean>(false);
   useEffect(() => {
-    const wrapper = wrapperRef.current;
+    const wrapper = wrapperRef?.current;
     if (!wrapper) return;
     const handleScroll = () => {
       wrapper.scrollTop > 30 ? setIsScroll(true) : setIsScroll(false);
