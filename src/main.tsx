@@ -7,32 +7,35 @@ import HomePage from "./pages/HomePage.tsx";
 import JourneyPage from "./pages/JourneyPage.tsx";
 import ProjectOverview from "./pages/ProjectOverviewPage.tsx";
 import ProjectsPage from "./pages/ProjectsPage.tsx";
-const routes = createBrowserRouter([
-  // { path: "/", Component: FlashScreenPage },
-  {
-    element: <App />,
-    children: [
-      { path: "/", Component: HomePage },
-      { path: "/Home", Component: HomePage },
-      {
-        path: "/projects",
-        Component: ProjectsPage,
-      },
-      {
-        path: "project-overview/:content",
-        Component: ProjectOverview,
-      },
-      {
-        path: "/journey",
-        Component: JourneyPage,
-      },
-      {
-        path: "/blog",
-        Component: BlogPage,
-      },
-    ],
-  },
-]);
+const routes = createBrowserRouter(
+  [
+    // { path: "/", Component: FlashScreenPage },
+    {
+      element: <App />,
+      children: [
+        { path: "/", Component: HomePage },
+        { path: "/Home", Component: HomePage },
+        {
+          path: "/projects",
+          Component: ProjectsPage,
+        },
+        {
+          path: "project-overview/:content",
+          Component: ProjectOverview,
+        },
+        {
+          path: "/journey",
+          Component: JourneyPage,
+        },
+        {
+          path: "/blog",
+          Component: BlogPage,
+        },
+      ],
+    },
+  ],
+  { basename: "/my-portfolio" },
+);
 createRoot(document.getElementById("root")!).render(
   <RouterProvider router={routes} />,
 );
